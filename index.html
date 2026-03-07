@@ -37,14 +37,14 @@
 
   <fieldset class="fieldset rounded-box p-4 space-y-[2px]">
   <label class="label text-base text-[#1F2937]">Username</label>
-  <input type="text" class="input w-full text-base text-[#64748B] outline-none" placeholder="Enter Username" />
+  <input id="userName" type="text" class="input w-full text-base text-[#64748B] outline-none" placeholder="Enter Username" />
   <p class="text-sm text-[#4A00FF]">Default: admin</p>
 
   <label class="label text-base text-[#1F2937]">Password</label>
-  <input type="password" class="input w-full text-base text-[#64748B] outline-none " placeholder="Enter Password" />
+  <input id="user_pass" type="password" class="input w-full text-base text-[#64748B] outline-none " placeholder="Enter Password" />
   <p class="text-sm text-[#4A00FF]">Default: admin123</p>
 
-  <button class="btn btn-primary mt-4">Sign In</button>
+  <button id="SignIn-btn" class="btn btn-primary mt-4">Sign In</button>
 
 <div class="flex items-center my-6">
     <div class="flex-grow border-t border-[#E4E4E7]"></div>
@@ -60,6 +60,7 @@
 </fieldset>
 </div>
 </section>
-    
+   
+<script src="script/login.js"></script>
 </body>
 </html>
