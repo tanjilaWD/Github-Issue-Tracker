@@ -11,7 +11,7 @@ document.getElementById('SignIn-btn').addEventListener('click', function(){
     document.getElementById('user_pass').value = '';
 
     if(user == 'admin' && password =='admin123'){
-        window.location.assign('../home.html');
+        window.location.assign('../main.html');
     }
     else{
         alert('Try Failed');
