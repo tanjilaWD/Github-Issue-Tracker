@@ -25,7 +25,7 @@
     </style>
 
 </head>
-<body class="bg-[#F8FAFC] min-h-screen">
+<body class="bg-[#F8FAFC] min-h-screen ">
  <!-- navber section -->
  <header class="px-6 py-4 flex items-center justify-between bg-white border-b border-gray-200 ">
   <div class="flex items-center gap-2">
@@ -51,6 +51,37 @@
     </label>
   </div>
  </header>
+
+ <!-- buttons section -->
+  <div class="bg-white mt-9 mb-5 p-5 shadow rounded container mx-auto">
+    <button class="btn px-12 bg-primary text-white">All</button>
+    <button class="btn px-9 text-[#64748B]">Open</button>
+    <button class="btn px-9 text-[#64748B]">Closed</button>
+  </div>
+
+  <!-- total issue section -->
+   <section class="container bg-white mx-auto">
+
+    <!-- left side -->
+     <div class="flex items-center justify-between p-5 shadow">
+     <div class="flex items-center gap-2">
+      <img src="./assets/Aperture.png" class="bg-gray-200 rounded-full border-3 border-gray-300 " alt="image">
+      <div>
+      <h2 class="text-[20px] font-semibold">50 Issues</h2>
+      <p class="text-base text-[#64748B]">Track and manage your project issues</p>
+      </div>
+     </div>
+
+     <!-- right side -->
+      <div class="flex gap-3">
+        <p class="flex items-center justify-center"><i class="fa-solid fa-circle text-[10px] mr-1 text-[#00A96E]"></i>Open</p>
+        <p class="flex items-center justify-center"><i class="fa-solid fa-circle text-[10px] mr-1 text-[#A855F7]"></i>Closed</p>
+      </div>
+      </div>
+   </section>
+
+  
+
 
 
 </body>
