@@ -27,6 +27,24 @@
 </head>
 <body>
  <!-- navber section -->
- 
+ <header class="bg-black text-white px-6 py-4 flex items-center justify-between">
+  <!-- Left side: Logo + Title -->
+  <div class="flex items-center gap-3">
+    <img src="./assets/github-logo.png" alt="logo" class="w-8 h-8">
+    <h1 class="text-lg font-semibold">GitHub Issues Tracker</h1>
+  </div>
+
+  <!-- Right side: Search + Button -->
+  <div class="flex items-center gap-3">
+    <input 
+      type="text" 
+      placeholder="Search issues..." 
+      class="px-3 py-1 rounded border border-gray-300 text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+    >
+    <button class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded font-medium">
+      + New Issue
+    </button>
+  </div>
+</header>
 </body>
 </html>
