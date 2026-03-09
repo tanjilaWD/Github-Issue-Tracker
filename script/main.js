@@ -9,22 +9,20 @@ const manageSpinner = (status) => {
     }
 }
 
-// document.getElementById('btn-search').addEventListener('click', ()=>{
-//    removeActive(); 
-//     const input = document.getElementById('input-search');
-//     const searchValue = input.value.trim().toLowerCase();
-//     console.log(searchValue);
+function searchIssues() {
+    const inputValue = document.getElementById('input-search').value.trim();
+    if (!inputValue) {
+        loadHomepage();
+        return;
+    }
+    manageSpinner(true);
+    const url = `https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${inputValue}`;
+    fetch(url)
+        .then((response) => response.json())
+        .then((data) => displayIssues(data.data));
 
-//     fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q={searchText}")
-//     .then(res=>res.json())
-//     .then((data)=>{
-//        const allWords = data.data; 
-//        console.log(allWords);
-//        const filterWords = allWords.filter(word=>word.word.toLowerCase().includes(searchValue)
-//     );
-//    displayloadLevelWord(filterWords);
-// });
-// });
+         document.getElementById('input-search').value = '';
+}
 
 
 function setActiveButton(activeId) {
