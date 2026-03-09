@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,64 +26,79 @@
     </style>
 
 </head>
-<body class="bg-[#F8FAFC] min-h-screen ">
- <!-- navber section -->
+
+<body>
+    <!-- navber section -->
  <header class="px-6 py-4 flex items-center justify-between bg-white border-b border-gray-200 ">
   <div class="flex items-center gap-2">
     <img src="./assets/github-logo.png" class="size-12" alt="logo">
     <h2 class="text-2xl font-semibold text-[#1F2937]">GitHub Issues Tracker</h2>
   </div>
-
+ 
+       <!-- search ber -->
+      <section class="flex justify-center ">
+       <div class="join">
   <div>
-    <label class="input outline-none">
-  <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <g
-      stroke-linejoin="round"
-      stroke-linecap="round"
-      stroke-width="2.5"
-      fill="none"
-      stroke="currentColor"
-    >
-      <circle cx="11" cy="11" r="8"></circle>
-      <path d="m21 21-4.3-4.3"></path>
-    </g>
-    </svg>
-     <input type="search" required placeholder="Search issues..." />
+    <label class="input validator join-item">
+        <g
+          stroke-linejoin="round"
+          stroke-linecap="round"
+          stroke-width="2.5"
+          fill="none"
+          stroke="currentColor"
+        >
+          <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+        </g>
+      </svg>
+      <input id="input-search" type="text" placeholder="Search Vocabulary Now"/>
     </label>
   </div>
+  <button id="btn-search" class="btn btn-primary join-item">Search</button>
+</div>
+      </section>
+
  </header>
+    <main class="w-11/12 mx-auto py-8 ">
+        <section class="flex flex-wrap gap-2 bg-white p-6 rounded-lg shadows mb-6">
+            <button id="btn-all" onclick="setActiveButton('btn-all'); loadHomepage()"
+                class="btn btn-primary w-30">All</button>
+            <button id="btn-open" onclick="setActiveButton('btn-open'); loadOpenIssues()"
+                class="btn btn-outline btn-primary w-30">Open</button>
+            <button id="btn-closed" onclick="setActiveButton('btn-closed'); loadClosedIssues()"
+                class="btn btn-outline btn-primary w-30">Closed</button>
+        </section>
+        <section id="issue-container" class="bg-white p-6 rounded-t-lg shadows mb-1">
 
- <!-- buttons section -->
-  <div class="bg-white mt-9 mb-5 p-5 shadow rounded container mx-auto">
-    <button class="btn px-12 bg-primary text-white">All</button>
-    <button class="btn px-9 text-[#64748B]">Open</button>
-    <button class="btn px-9 text-[#64748B]">Closed</button>
-  </div>
+        </section>
+        <section id="loder" class="flex justify-center items-center mt-20 hidden">
+            <span class="loading loading-spinner loading-xl"></span>
+        </section>
+        <section class="bg-white p-6  shadows mb-6">
+            <div id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
 
-  <!-- total issue section -->
-   <section class="container bg-white mx-auto">
+            </div>
 
-    <!-- left side -->
-     <div class="flex items-center justify-between p-5 shadow">
-     <div class="flex items-center gap-2">
-      <img src="./assets/Aperture.png" class="bg-gray-200 rounded-full border-3 border-gray-300 " alt="image">
-      <div>
-      <h2 class="text-[20px] font-semibold">50 Issues</h2>
-      <p class="text-base text-[#64748B]">Track and manage your project issues</p>
-      </div>
-     </div>
+        </section>
+    </main>
 
-     <!-- right side -->
-      <div class="flex gap-3">
-        <p class="flex items-center justify-center"><i class="fa-solid fa-circle text-[10px] mr-1 text-[#00A96E]"></i>Open</p>
-        <p class="flex items-center justify-center"><i class="fa-solid fa-circle text-[10px] mr-1 text-[#A855F7]"></i>Closed</p>
-      </div>
-      </div>
-   </section>
-
-  
+    <!-- Issue Detail Modal -->
+    <dialog id="my_modal_1" class="modal">
+        <div class="modal-box w-11/12 max-w-2xl">
+            <div id="modal-content">
+            </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <button class="btn">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
 
 
 
+   
+<script src="script/main.js"></script>
 </body>
+
 </html>
